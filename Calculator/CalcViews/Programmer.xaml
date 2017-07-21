@@ -1,0 +1,156 @@
+﻿<Page
+    x:Class="Calculator.CalcViews.Programmer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator.CalcViews"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="14*" />
+                <RowDefinition Height="14*" />
+                <RowDefinition Height="14*" />
+                <RowDefinition Height="14*" />
+                <RowDefinition Height="14*" />
+                <RowDefinition Height="14*" />
+            </Grid.RowDefinitions>
+
+            <!--QWord-->
+            <Grid x:Name="QwordBitness" Grid.Row="0" Grid.ColumnSpan="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                </Grid.ColumnDefinitions>
+
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="5,5,0,5"><TextBlock x:Name="BinaryLastUp" Text="64" Foreground="LightGray"   VerticalAlignment="Center" HorizontalAlignment="Left" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="4" HorizontalAlignment="Left" Margin="5,5,0,5"><TextBlock x:Name="BinaryMiddleUp" Text="47" Foreground="LightGray"   VerticalAlignment="Center" HorizontalAlignment="Left" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="7" HorizontalAlignment="Right" Margin="0,5,5,5"><TextBlock x:Name="BinaryInitalUp" Text="32" Foreground="LightGray"   VerticalAlignment="Center" HorizontalAlignment="Left" /></Viewbox>
+            
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="0"><TextBlock x:Name="BinaryFirstUp" Text="0000" Foreground="Gray"   VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="1"><TextBlock x:Name="BinarySecondUp" Text="0000" Foreground="Gray"  VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="2"><TextBlock x:Name="BinaryThirdUp" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="3"><TextBlock x:Name="BinaryFourthUp" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="4"><TextBlock x:Name="BinaryFifthUp" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="5"><TextBlock x:Name="BinarySixthUp" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="6"><TextBlock x:Name="BinarySeventhUp" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="0" Grid.Column="7"><TextBlock x:Name="BinaryEightUp" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+
+            </Grid>
+
+            <!--DWord-->
+            <Grid x:Name="DwordBitness" Grid.Row="1" Grid.ColumnSpan="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                </Grid.ColumnDefinitions>
+                
+                <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="5,5,0,5"><TextBlock x:Name="BinaryLast" Text="31" Foreground="LightGray"   VerticalAlignment="Center" HorizontalAlignment="Left" /></Viewbox>
+
+                <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="0"><TextBlock x:Name="BinaryFirst" Text="0000" Foreground="Gray"   VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="1"><TextBlock x:Name="BinarySecond" Text="0000" Foreground="Gray"  VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="2"><TextBlock x:Name="BinaryThird" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="3"><TextBlock x:Name="BinaryFourth" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                
+            </Grid>
+
+            <!--Word-->
+            <Grid x:Name="WordBitness" Grid.Row="1" Grid.Column="4"  Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.25*" />
+                    <ColumnDefinition Width="1.25*" />
+                </Grid.ColumnDefinitions>
+                
+                <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="5,5,0,5"><TextBlock x:Name="BinaryMiddle" Text="15" Foreground="LightGray"   VerticalAlignment="Center" HorizontalAlignment="Left" /></Viewbox>    
+                
+                <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="0"><TextBlock x:Name="BinaryFifth" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+                <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="1"><TextBlock x:Name="BinarySixth" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+            </Grid>
+            
+            <!--Byte-->
+            <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="7" HorizontalAlignment="Right" Margin="0,5,5,5"><TextBlock x:Name="BinaryInital" Text="0" Foreground="LightGray"   VerticalAlignment="Center" HorizontalAlignment="Left" /></Viewbox>
+
+            <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="6"><TextBlock x:Name="BinarySeventh" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+            <Viewbox Height="Auto"  Grid.Row="1" Grid.Column="7"><TextBlock x:Name="BinaryEight" Text="0000"  Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" /></Viewbox>
+
+            <!-- Zeroth row of buttons -->
+            <Button Grid.Row="2" IsEnabled="False"  Grid.Column="0" Style="{StaticResource FunctionButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="func" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Operator_Single_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="RGB" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Operator_Double_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="Mod" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Value_Button_Click" x:Name="AButton"  Grid.Column="3" Style="{StaticResource ValueButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="A" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Metro_Memory_Add_Button_Click" Grid.Column="4" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="m+" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Metro_Memory_Restore_Button_Click" Grid.Column="5" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="mr" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Negate_Button_Click" Grid.Column="6"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="±" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Operator_Double_Button_Click" Grid.Column="7" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="÷" /> </Viewbox> </Button>
+
+            <!-- First row of buttons -->
+            <Button Grid.Row="3" IsEnabled="False" Grid.Column="0" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Paran_Button_Click"  Grid.Column="1"  Style="{StaticResource OperatorButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="(" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Paran_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text=")" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Value_Button_Click" x:Name="BButton" Grid.Column="3" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="B" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Clear_Calc_Button_Click" Grid.Column="4" Style="{StaticResource ClearButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="C" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Clear_Error_Button_Click"  Grid.Column="5"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="CE" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Delete_Last_Button_Click" Grid.Column="6" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="←" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Operator_Double_Button_Click" Grid.Column="7" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="×" /> </Viewbox> </Button>
+           
+            <!-- Second row of buttons -->
+            <ToggleButton Grid.Row="4" x:Name="QWordButton" Click="QWord_Bitness_Click" IsChecked="true"  Grid.Column="0" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="Qword" /> </Viewbox> </ToggleButton>
+            <Button Grid.Row="4" Click="Operator_Single_Button_Click" Grid.Column="1"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="RoL" /> </Viewbox> </Button>
+            <Button Grid.Row="4" Click="Operator_Single_Button_Click" Grid.Column="2"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="RoR" /> </Viewbox> </Button>
+            <Button Grid.Row="4" Click="Value_Button_Click" x:Name="CButton" Grid.Column="3"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="C" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="SevenButton" Click="Value_Button_Click" Grid.Column="4"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="7" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="EightButton" Click="Value_Button_Click" Grid.Column="5"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="8" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="NineButton" Click="Value_Button_Click" Grid.Column="6"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="9" /> </Viewbox> </Button>
+            <Button Grid.Row="4" Click="Operator_Double_Button_Click" Grid.Column="7" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="-" /> </Viewbox> </Button>
+
+            <!-- Third row of buttons -->
+            <ToggleButton Grid.Row="5" x:Name="DWordButton" Click="DWord_Bitness_Click" Grid.Column="0" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="Dword" /> </Viewbox> </ToggleButton>
+            <Button Grid.Row="5" Click="Operator_Double_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="Or" /> </Viewbox> </Button>
+            <Button Grid.Row="5" Click="Operator_Double_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="Xor" /> </Viewbox> </Button>
+            <Button Grid.Row="5" Click="Value_Button_Click" x:Name="DButton" Grid.Column="3"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="D" /> </Viewbox> </Button>
+            <Button Grid.Row="5" x:Name="FourButton" Click="Value_Button_Click" Grid.Column="4" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="4" /> </Viewbox> </Button>
+            <Button Grid.Row="5" x:Name="FiveButton" Click="Value_Button_Click" Grid.Column="5" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="5" /> </Viewbox> </Button>
+            <Button Grid.Row="5" x:Name="SixButton" Click="Value_Button_Click" Grid.Column="6" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="6" /> </Viewbox> </Button>
+            <Button Grid.Row="5" Click="Operator_Double_Button_Click" Grid.Column="7" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="+" /> </Viewbox> </Button>
+            
+            <!-- Fourth row of buttons -->
+            <ToggleButton Grid.Row="6" x:Name="WordButton" Click="Word_Bitness_Click" Grid.Column="0" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="Word" /> </Viewbox> </ToggleButton>
+            <Button Grid.Row="6" Click="Operator_Double_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="Lsh" /> </Viewbox> </Button>
+            <Button Grid.Row="6" Click="Operator_Double_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="Rsh" /> </Viewbox> </Button>
+            <Button Grid.Row="6" Click="Value_Button_Click" x:Name="EButton" Grid.Column="3" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="E" /> </Viewbox> </Button>
+            <Button Grid.Row="6" Click="Value_Button_Click" Grid.Column="4" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="1" /> </Viewbox> </Button>
+            <Button Grid.Row="6" x:Name="TwoButton" Click="Value_Button_Click" Grid.Column="5" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="2" /> </Viewbox> </Button>
+            <Button Grid.Row="6" x:Name="ThreeButton" Click="Value_Button_Click" Grid.Column="6" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="3" /> </Viewbox> </Button>
+            <Button Grid.Row="6" x:Name="EqualProgrammer"  Click="Equal_Button_Click" Grid.Column="7" Grid.RowSpan="2" Style="{StaticResource EqualButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="=" /> </Viewbox> </Button>
+                       
+            <!-- Fifth row of buttons -->
+            <ToggleButton Grid.Row="7" x:Name="ByteButton" Click="Byte_Bitness_Click" Grid.Column="0"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="Byte" /> </Viewbox> </ToggleButton>
+            <Button Grid.Row="7" Click="Operator_Single_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="Not" /> </Viewbox> </Button>
+            <Button Grid.Row="7" Click="Operator_Double_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="And" /> </Viewbox> </Button>
+            <Button Grid.Row="7" Click="Value_Button_Click" x:Name="FButton" Grid.Column="3" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="F" /> </Viewbox> </Button>
+            <Button Grid.Row="7" Click="Value_Button_Click" Grid.Column="4" Grid.ColumnSpan="2" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="0" /> </Viewbox> </Button>
+            <Button Grid.Row="7" IsEnabled="False" Grid.Column="6"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="." /> </Viewbox> </Button>
+    </Grid>
+</Page>

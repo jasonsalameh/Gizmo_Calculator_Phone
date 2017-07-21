@@ -1,0 +1,43 @@
+﻿<UserControl
+    x:Class="Calculator.MemoryItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="80" MaxHeight="80" MinHeight="80"
+    d:DesignWidth="200" MaxWidth="200" MinWidth="200" Margin="0,20,0,0">
+
+    <Grid Background="#303030" Width="200" Tapped="Use_Memory_Click">
+        <Border BorderBrush="#303030" BorderThickness="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Column="0" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*" />
+                        <RowDefinition Height="6*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="MemoryType" Grid.Row="0" Padding="0" Margin="20,0,0,0" Text="Hexidecimal" VerticalAlignment="Center" FontSize="15" />
+                    <TextBlock x:Name="MemoryValue" Grid.Row="1" Grid.RowSpan="2" Padding="0" Margin="10,0,0,0" TextTrimming="WordEllipsis"  VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="152.34512345" FontSize="40" />
+                </Grid>
+                    
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="6*" />
+                        <RowDefinition Height="4*" />
+                    </Grid.RowDefinitions>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0"  Padding="0" BorderBrush="#303030"   Click="Remove_Memory_Click">
+                        <Viewbox Height="Auto" >
+                            <TextBlock FontWeight="Bold" Foreground="#E77471" Text="X"/>
+                        </Viewbox>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

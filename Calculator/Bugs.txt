@@ -1,0 +1,12 @@
+﻿Featuress
+1. Statistics Mode
+2. Graphing calculator
+3. Financial calc
+
+Bugs
+1. when changing res, whats in the stat calc add window doesn't shrink or grow with the res
+2. suspend resume functionality with memory
+3. memory is scrambled when you relaunch app
+
+
+

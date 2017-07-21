@@ -1,0 +1,104 @@
+﻿<Page
+    x:Class="Calculator.CalcViews.Scientific"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator.CalcViews"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+                <ColumnDefinition Width="1.25*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16*" />
+                <RowDefinition Height="16*" />
+                <RowDefinition Height="16*" />
+                <RowDefinition Height="16*" />
+                <RowDefinition Height="16*" />
+                <RowDefinition Height="16*" />
+            </Grid.RowDefinitions>
+
+
+            <!-- Zeroth row of buttons -->
+            <ToggleButton Grid.Row="0" Click="Function_Button_Click"  Grid.Column="0" Style="{StaticResource FunctionButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="func" /> </Viewbox> </ToggleButton>
+            <Button Grid.Row="0" Click="Paran_Button_Click"  Grid.Column="1"  Style="{StaticResource OperatorButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="(" /> </Viewbox> </Button>
+            <Button Grid.Row="0" Click="Paran_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text=")" /> </Viewbox> </Button>
+            <Button Grid.Row="0" Click="Operator_Single_Button_Click" Grid.Column="3" Style="{StaticResource OperatorButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="%" /> </Viewbox> </Button>
+            <Button Grid.Row="0" Click="Metro_Memory_Add_Button_Click" Grid.Column="4" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="m+" /> </Viewbox> </Button>
+            <Button Grid.Row="0" Click="Metro_Memory_Restore_Button_Click" Grid.Column="5" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="mr" /> </Viewbox> </Button>
+            <Button Grid.Row="0" Click="Negate_Button_Click" Grid.Column="6"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="±" /> </Viewbox> </Button>
+            <Button Grid.Row="0" Click="Operator_Double_Button_Click" Grid.Column="7" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="÷" /> </Viewbox> </Button>
+
+            <!-- First row of buttons -->
+            <Button Grid.Row="1" Click="Operator_Single_Button_Click" Grid.Column="0" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="1/x" /> </Viewbox> </Button>
+            <Button Grid.Row="1" Click="Operator_Single_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="x²" /> </Viewbox> </Button>
+            <Button Grid.Row="1" Click="Operator_Single_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="x³" /> </Viewbox> </Button>
+            <Button Grid.Row="1" Click="Operator_Double_Button_Click" Grid.Column="3" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="yˣ" /> </Viewbox> </Button>
+            <Button Grid.Row="1" Click="Clear_Calc_Button_Click" Grid.Column="4" Style="{StaticResource ClearButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="C" /> </Viewbox> </Button>
+            <Button Grid.Row="1" Click="Clear_Error_Button_Click"  Grid.Column="5"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="CE" /> </Viewbox> </Button>
+            <Button Grid.Row="1" Click="Delete_Last_Button_Click" Grid.Column="6" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="←" /> </Viewbox> </Button>
+            <Button Grid.Row="1" Click="Operator_Double_Button_Click" Grid.Column="7" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="×" /> </Viewbox> </Button>
+            
+            <!-- Second row of buttons -->
+            <Button Grid.Row="2" Click="Operator_Single_Button_Click" Grid.Column="0" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="x!" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Operator_Single_Button_Click" Grid.Column="1"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="√" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Operator_Single_Button_Click" Grid.Column="2"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="abs" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Operator_Single_Button_Click" Grid.Column="3"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="log" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Value_Button_Click" Grid.Column="4"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="7" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Value_Button_Click" Grid.Column="5"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="8" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Value_Button_Click" Grid.Column="6"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="9" /> </Viewbox> </Button>
+            <Button Grid.Row="2" Click="Operator_Double_Button_Click" Grid.Column="7" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="-" /> </Viewbox> </Button>
+
+            <!-- Third row of buttons -->
+            <Button Grid.Row="3" x:Name="SinButton" Click="Operator_Single_Button_Click" Grid.Column="0" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="sin" /> </Viewbox> </Button>
+            <Button Grid.Row="3" x:Name="CosButton" Click="Operator_Single_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="cos" /> </Viewbox> </Button>
+            <Button Grid.Row="3" x:Name="TanButton" Click="Operator_Single_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="tan" /> </Viewbox> </Button>
+            <Button Grid.Row="3" x:Name="NatLogButton" Click="Operator_Single_Button_Click" Grid.Column="3"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="ln" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Value_Button_Click" Grid.Column="4" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="4" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Value_Button_Click" Grid.Column="5" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="5" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Value_Button_Click" Grid.Column="6" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="6" /> </Viewbox> </Button>
+            <Button Grid.Row="3" Click="Operator_Double_Button_Click" Grid.Column="7" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="+" /> </Viewbox> </Button>
+
+            <!-- Third row of buttons (Hidden until Function is pressed) -->
+            <Button Grid.Row="3" x:Name="SinButtonF" Visibility="Collapsed" Click="Operator_Single_Button_Click" Grid.Column="0" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="sinˉ¹" /> </Viewbox> </Button>
+            <Button Grid.Row="3" x:Name="CosButtonF" Visibility="Collapsed" Click="Operator_Single_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="cosˉ¹" /> </Viewbox> </Button>
+            <Button Grid.Row="3" x:Name="TanButtonF" Visibility="Collapsed" Click="Operator_Single_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="tanˉ¹" /> </Viewbox> </Button>
+            <Button Grid.Row="3" x:Name="NatLogButtonF" Visibility="Collapsed" Click="Operator_Single_Button_Click" Grid.Column="3"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="log₂" /> </Viewbox> </Button>
+            
+            <!-- Fourth row of buttons -->
+            <Button Grid.Row="4" x:Name="SinhButton" Click="Operator_Single_Button_Click" Grid.Column="0" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="sinh" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="CoshButton" Click="Operator_Single_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="cosh" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="TanhButton" Click="Operator_Single_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="tanh" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="EXButton" Click="Operator_Single_Button_Click" Grid.Column="3" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="eˣ" /> </Viewbox> </Button>
+            <Button Grid.Row="4" Click="Value_Button_Click" Grid.Column="4" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="1" /> </Viewbox> </Button>
+            <Button Grid.Row="4" Click="Value_Button_Click" Grid.Column="5" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="2" /> </Viewbox> </Button>
+            <Button Grid.Row="4" Click="Value_Button_Click" Grid.Column="6" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="3" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="EqualScientific"  Click="Equal_Button_Click" Grid.Column="7" Grid.RowSpan="2" Style="{StaticResource EqualButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="=" /> </Viewbox> </Button>
+            
+            <!-- Fourth row of buttons (Hidden until Function is pressed) -->
+            <Button Grid.Row="4" x:Name="SinhButtonF" Visibility="Collapsed" Click="Operator_Single_Button_Click" Grid.Column="0" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="sinhˉ¹" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="CoshButtonF" Visibility="Collapsed" Click="Operator_Single_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="coshˉ¹" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="TanhButtonF" Visibility="Collapsed" Click="Operator_Single_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="tanhˉ¹" /> </Viewbox> </Button>
+            <Button Grid.Row="4" x:Name="EXButtonF" Visibility="Collapsed" Click="Operator_Single_Button_Click" Grid.Column="3" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="2ˣ" /> </Viewbox> </Button>
+            
+            <!-- Fifth row of buttons -->
+            <Button Grid.Row="5" Click="Operator_Single_Button_Click" Grid.Column="0"  Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="round" /> </Viewbox> </Button>
+            <Button Grid.Row="5" Click="Symbol_Button_Click" Grid.Column="1" Style="{StaticResource OperatorButtonStyle}"> <Viewbox Height="Auto"> <TextBlock Text="π" /> </Viewbox> </Button>
+            <Button Grid.Row="5" Click="Symbol_Button_Click" Grid.Column="2" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="e" /> </Viewbox> </Button>
+            <Button Grid.Row="5" Click="Rand_Button_Click"  Grid.Column="3" Style="{StaticResource OperatorButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="rand" /> </Viewbox> </Button>
+            <Button Grid.Row="5" Click="Value_Button_Click" Grid.Column="4" Grid.ColumnSpan="2" Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="0" /> </Viewbox> </Button>
+            <Button Grid.Row="5" Click="Dot_Button_Click" Grid.Column="6"  Style="{StaticResource ValueButtonStyle}"><Viewbox Height="Auto"> <TextBlock Text="." /> </Viewbox> </Button>
+
+        </Grid>
+    </Grid>
+</Page>

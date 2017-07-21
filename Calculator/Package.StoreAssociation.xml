@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoreAssociation>
+  <Publisher>CN=E081F0F1-79F0-41EA-B340-52F7785F1064</Publisher>
+  <NamespacePrefix>39266FreeFlyFastEntertain</NamespacePrefix>
+  <PublisherDisplayName>FreeFlyFast Entertainment</PublisherDisplayName>
+  <GeneratePackageHash>http://www.w3.org/2001/04/xmlenc#sha256</GeneratePackageHash>
+  <SupportedLocales>en-us;de-de;fr-fr;ja-jp;zh-cn</SupportedLocales>
+  <ProductReservedInfo>
+    <MainPackageIdentityName>39266FreeFlyFastEntertain.Calculate</MainPackageIdentityName>
+    <ReservedNames>
+      <ReservedName>Calculate</ReservedName>
+    </ReservedNames>
+  </ProductReservedInfo>
+  <AccountPackageIdentityNames />
+  <PackageInfoList>
+    <PackageInfo>
+      <PackageArchitecture>neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.0.0.0</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
+</StoreAssociation>
